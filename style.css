@@ -107,15 +107,15 @@ header{
 .home{
     width: 100%;
     min-height: 100vh;
-    background: url(img/bg.jpg);
+    background-image: url("https://i.pinimg.com/1200x/e3/39/f8/e339f852c3fc3002e28cab63bd5aa39e.jpg");
     background-size: cover;
     background-position: center;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(10rem,auto));
     align-items: center;
     gap: 1.5rem;
-    padding-top: 370px; 
-    padding-left: 110px;
+    padding-top: 200px; 
+    padding-left: 80px;
 }
 @media (max-width:400) {
     .home{
@@ -125,7 +125,7 @@ header{
 }
 @media (max-width:320) {
     .home{
-        background-image: url(img/bgres.jpg);
+        background-image: none;
     }   
 }
 .home-text h1{
@@ -144,8 +144,8 @@ header{
     font-size: 0.938rem;
     font-weight: 700;
     border-radius: 5px;
-    color: var(--latte-cream);
-    background-color: var(--dark-brown);
+    color: var(--espresso);
+    /* background-color: var(--dark-brown); */
     margin: 0.5rem 0 1.4rem;
     padding: 7px;
 }
@@ -165,23 +165,25 @@ header{
     align-items: center;
     gap: 1.5rem;
     display: flex;
+    padding-top: 150px;
 }
 @media (max-width: 840px) {
   .about {
     flex-wrap: wrap;
+    text-align: justify;
   }
 }
 .about-img img{
     border-radius: 0.5rem;
-    height: 340px;
+    height: 440px;
     width: 350px;
 }
 .about-text h2{
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     text-transform: uppercase;
 }
 .about-text p{
-    font-size: 0.93rem;
+    font-size: 1.05rem;
     margin: 0.5rem 0 1.1rem;
     flex-wrap: wrap;
 }
@@ -191,6 +193,7 @@ header{
 .heading h2{
     font-size: 1.8rem;
     text-transform: uppercase;
+    padding-top: 80px;
 }
 .products{
     display: grid;
@@ -217,11 +220,13 @@ header{
     border-radius: 0.5rem; 
     cursor: pointer;
 }
+
 .products .box h3{
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     margin: 0.5rem 0 0.5rem;
+    color: wheat;
 }
 .products .box .content{
     display: flex;
@@ -309,10 +314,86 @@ header{
     background-color: var(--dark-brown);
     transition: 0.2s all linear;
 }
-.qoute{
-    width: 50px;
-    display: flex;
+
+
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-image: url("https://i.pinimg.com/736x/ca/67/f2/ca67f23f0f863bad083b41b00919182b.jpg");
+   background-size: cover;
+    background-position: center;
 }
+
+.contact-container {
+  background-color: #fff;
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.contact-container h2 {
+  margin-left: 120px;
+  margin-bottom: 10px;
+  color: #5a3825;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.contact-container p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #7a5c4b;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a97450;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6f4e37;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #5a3d2b;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 22px;
+  }
+}
+
 .footer{
      display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
@@ -420,9 +501,6 @@ header{
         font-size: 0.8rem;
         font-weight: 300;
     }
-    .about-img{
-        order: 1;
-    }
     .about-text{
         text-align: center;
     }
@@ -482,8 +560,8 @@ header{
 
 @media (max-width: 460px) {
     .home {
-        padding-top: 150px;
-        padding-left: 70px;
+        padding-top: 170px;
+        padding-left: 55px;
     }
     
     .home-text h1 {
@@ -514,8 +592,8 @@ header{
 
 
 
-@media (max-width: 320px) {
-  header {
+@media (max-width: 375px) {
+    header {
     padding: 10px 4%;
   }
 
@@ -525,14 +603,15 @@ header{
 
   .home {
     padding-top: 120px;
-    padding-left: 30px;
+    padding-left: 40px;
     grid-template-columns: 1fr;
-  }
+    /* padding-right: 1px; */
+}
 
-  .home-text h1 {
+.home-text h1 {
     font-size: 1.2rem;
     letter-spacing: 0.5px;
-  }
+}
 
   .home-text p {
     font-size: 0.75rem;
@@ -555,9 +634,12 @@ header{
     height: 250px;
     padding: 0;
   } */
-
+  
+  .about-img{
+      order: 1;
+  }
   .about-text {
-    text-align: center;
+      text-align: center;
     padding: 0 10px;
   }
 
